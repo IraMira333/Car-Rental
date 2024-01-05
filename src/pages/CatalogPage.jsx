@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCars } from 'redux/operations';
-import { selectCars, selectIsLastPage, selectIsLoading } from 'redux/selectors';
+import { getCars } from '../redux/operations';
+import {
+  selectCars,
+  selectIsLastPage,
+  selectIsLoading,
+} from '../redux/selectors';
 import CarsGrid from 'components/CarsGrid/CarsGrid';
 import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
 import FilterBar from 'components/FilterBar/FilterBar';

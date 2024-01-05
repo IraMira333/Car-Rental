@@ -15,8 +15,8 @@ import {
 } from './CarCard.styled';
 import Modal from 'components/Modal/Modal';
 import DetailsAboutTheCar from 'components/DetailsAboutTheCar/DetailsAboutTheCar';
-import { addFavoriteCar, deleteFavoriteCar } from 'redux/carSlice';
-import { selectFavoriteCars } from 'redux/selectors';
+import { addFavoriteCar, deleteFavoriteCar } from '../../redux/carSlice';
+import { selectFavoriteCars } from '../../redux/selectors';
 
 const CarCard = ({ car }) => {
   const {

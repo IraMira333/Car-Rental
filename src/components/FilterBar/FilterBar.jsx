@@ -1,6 +1,6 @@
 import { CARSBRANDARRAY } from 'constants/CARSBRANDARRAY';
 import { Formik, useField, useFormik } from 'formik';
-import { createArrayWithStep } from 'helpers/helpers';
+import { createArrayWithStep } from '../../helpers/helpers';
 import {
   FilterItemBox,
   FilterLineBox,
