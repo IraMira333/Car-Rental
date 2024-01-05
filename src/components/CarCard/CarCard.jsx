@@ -1,8 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addFavoriteCar, deleteFavoriteCar } from 'redux/carSlice';
-import { selectFavoriteCars } from 'redux/selectors';
-
 import {
   CarDescription,
   CarDetailButton,
@@ -18,6 +15,8 @@ import {
 } from './CarCard.styled';
 import Modal from 'components/Modal/Modal';
 import DetailsAboutTheCar from 'components/DetailsAboutTheCar/DetailsAboutTheCar';
+import { addFavoriteCar, deleteFavoriteCar } from 'redux/carSlice';
+import { selectFavoriteCars } from 'redux/selectors';
 
 const CarCard = ({ car }) => {
   const {

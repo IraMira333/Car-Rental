@@ -1,9 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
-
-import CatalogPage from 'pages/CatalogPage';
-import FavoritePage from 'pages/FavoritePage';
 import HomePage from 'pages/HomePage/HomePage';
+import CatalogPage from 'pages/CatalogPages';
+import FavoritePage from 'pages/FavoritePage';
 
 export default function App() {
   console.log('Hello World');
