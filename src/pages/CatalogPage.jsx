@@ -9,6 +9,7 @@ import {
 import CarsGrid from 'components/CarsGrid/CarsGrid';
 import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
 import FilterBar from 'components/FilterBar/FilterBar';
+import Spiner from 'components/Spiner/Spiner';
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export default function CatalogPage() {
     <>
       <FilterBar params={params} setParams={setParams} />
       <CarsGrid cars={carsInfo} />
+      {isLoading && <Spiner />}
       {isNeedLoadMoreButton && <LoadMoreButton onClick={onLoadMore} />}
     </>
   );

@@ -100,7 +100,7 @@ const FilterBar = ({ params, setParams }) => {
                 options={priceOptions}
                 value={formik.values.price}
                 onChange={value => {
-                  const newPrice = `To ${value.value} $`;
+                  const newPrice = `To ${value.value}$`;
                   setFormattedPrice(newPrice);
                   formik.setFieldValue('price', value.value);
                 }}
