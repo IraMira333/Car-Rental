@@ -40,7 +40,8 @@ const carSlice = createSlice({
         if (page === 1) state.carsInfo = carsInfo;
         if (page > 1) state.carsInfo = [...state.carsInfo, ...carsInfo];
 
-        if (carsInfo.length < 12) state.isLastPage = true;
+        if (carsInfo.length < 12 || carsInfo.length > 12)
+          state.isLastPage = true;
 
         state.error = null;
         state.isLoading = false;
