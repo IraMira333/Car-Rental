@@ -10,6 +10,7 @@ import CarsGrid from 'components/CarsGrid/CarsGrid';
 import LoadMoreButton from 'components/LoadMoreButton/LoadMoreButton';
 import FilterBar from 'components/FilterBar/FilterBar';
 import Spiner from 'components/Spiner/Spiner';
+import { HomeP } from './HomePage/HomePage.styled';
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
@@ -28,10 +29,20 @@ export default function CatalogPage() {
 
   const isNeedLoadMoreButton = !isLastPage && !isLoading && carsInfo.length > 0;
 
+  const isCarsFound = carsInfo.length > 0;
+
   return (
     <>
       <FilterBar params={params} setParams={setParams} />
-      <CarsGrid cars={carsInfo} />
+      {isCarsFound ? (
+        <CarsGrid cars={carsInfo} />
+      ) : (
+        <HomeP>
+          Sorry. No cars found matching the search settings. Try changing your
+          search parameters...
+        </HomeP>
+      )}
+
       {isLoading && <Spiner />}
       {isNeedLoadMoreButton && <LoadMoreButton onClick={onLoadMore} />}
     </>

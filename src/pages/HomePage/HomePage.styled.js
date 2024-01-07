@@ -67,6 +67,7 @@ export const HomeP = styled.p`
   margin-top: 5px;
   margin-bottom: 10px;
   color: #706f6e;
+  text-align: center;
   @media screen and (max-width: 424px) {
     font-size: 12px;
   }
