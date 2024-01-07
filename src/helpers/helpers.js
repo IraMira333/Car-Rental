@@ -20,3 +20,7 @@ export const filterByMileage = (cars, start = 0, end = 0) => {
     return cars.filter(car => car.mileage >= start && car.mileage <= end);
   }
 };
+
+export const filterByMake = (cars, brandName) => {
+  return cars.filter(car => car.make === brandName);
+};

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { filterByMileage, filterByPrice } from 'helpers/helpers';
+import { filterByMake, filterByMileage, filterByPrice } from 'helpers/helpers';
 import { getCarsAPI } from 'services/API';
 
 export const getCars = createAsyncThunk(
@@ -9,8 +9,8 @@ export const getCars = createAsyncThunk(
     console.log(values);
 
     try {
-      if (mileageFrom || mileageTo || price) {
-        const params = { page, make };
+      if (mileageFrom || mileageTo || price || make) {
+        const params = { page };
         const result = await getCarsAPI(params);
         console.log(result);
         let carsInfo = result;
@@ -19,7 +19,7 @@ export const getCars = createAsyncThunk(
           carsInfo = filterByMileage(carsInfo, mileageFrom, mileageTo);
 
         if (price) carsInfo = filterByPrice(carsInfo, price);
-
+        if (make) carsInfo = filterByMake(carsInfo, make);
         return { carsInfo, page };
       }
       const limit = 12;
