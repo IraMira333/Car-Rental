@@ -10,6 +10,7 @@ export const ImageBox = styled.div`
   @media screen and (max-width: 600px) {
     min-width: 280px;
     max-height: 248px;
+    margin-top: 35px;
   }
 `;
 export const Image = styled.img`
