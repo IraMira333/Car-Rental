@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <>
       <AppBar />
-      <main>
+      <main class="mainFT">
         <Suspense fallback={<Spiner />}>
           <Outlet />
         </Suspense>

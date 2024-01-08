@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export const FooterBox = styled.section`
+export const FooterBox = styled.footer`
   text-align: center;
   background: linear-gradient(to right, #095680, #ffffff);
   color: #2a2b2b;
   padding-top: 5px;
   padding-bottom: 5px;
+  flex: 0 0 auto;
 `;
 export const FooterP = styled.p`
   font-size: 14px;
