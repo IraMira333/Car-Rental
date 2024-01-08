@@ -37,7 +37,6 @@ const FilterBar = ({ params, setParams }) => {
       mileageTo: '',
     },
     onSubmit: values => {
-      console.log(values);
       setParams({ ...params, ...values, page: 1 });
     },
   });
@@ -52,7 +51,6 @@ const FilterBar = ({ params, setParams }) => {
         decimalScale={3}
         thousandSeparator={true}
         onValueChange={values => {
-          console.log(values);
           const { floatValue } = values;
 
           formik.setFieldValue(field.name, floatValue);

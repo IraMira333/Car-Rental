@@ -11,7 +11,6 @@ import HomePage from 'pages/HomePage/HomePage';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 export default function App() {
-  console.log('Hello World');
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

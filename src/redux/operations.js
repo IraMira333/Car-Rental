@@ -6,13 +6,12 @@ export const getCars = createAsyncThunk(
   'cars/getCars',
   async (values, { rejectWithValue }) => {
     const { page, mileageFrom, mileageTo, price, make } = values;
-    console.log(values);
 
     try {
       if (mileageFrom || mileageTo || price || make) {
         const params = { page };
         const result = await getCarsAPI(params);
-        console.log(result);
+
         let carsInfo = result;
 
         if (mileageFrom || mileageTo)
@@ -25,7 +24,7 @@ export const getCars = createAsyncThunk(
       const limit = 12;
       const params = { limit, page, make };
       const result = await getCarsAPI(params);
-      console.log(result);
+
       let carsInfo = result;
       return { carsInfo, page };
     } catch (error) {

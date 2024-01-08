@@ -36,7 +36,7 @@ const carSlice = createSlice({
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         const { carsInfo, page } = action.payload;
-        console.log(carsInfo, page);
+
         if (page === 1) state.carsInfo = carsInfo;
         if (page > 1) state.carsInfo = [...state.carsInfo, ...carsInfo];
 
